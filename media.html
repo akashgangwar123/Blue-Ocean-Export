@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Media Gallery - Mudra Global</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial, sans-serif;background:white;color:#333;overflow-x:hidden;}
+
+/* ===== BACKGROUND VIDEO ===== */
+.bg-video{
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    object-fit:cover;
+    z-index:-1;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;   /* ✅ transparent header */
+    color: white;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 120px;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* ===== PAGE TITLE ===== */
+.page-title{
+    margin-top:160px;
+    text-align:center;
+    font-size:32px;
+    color:#9c6b3d;
+    font-weight:bold;
+}
+
+/* ===== GALLERY SECTION ===== */
+.gallery-container{
+    width:90%;margin:50px auto;
+}
+.gallery-container img{
+    width:100%;border-radius:10px;margin-bottom:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== VIDEO PLACEHOLDER ===== */
+.video-space{
+    width:100%;height:380px;
+    background:rgba(255,255,255,0.6);border-radius:10px;
+    display:flex;justify-content:center;align-items:center;
+    color:#333;font-size:20px;border:2px dashed #ccc;
+    margin-bottom:60px;
+}
+
+/* ===== DIRECTOR SECTION ===== */
+.director-section{
+    width:90%;margin:0 auto 80px;line-height:1.7;
+    font-size:15px;color:#fff;
+    text-shadow:0 1px 5px rgba(0,0,0,0.8);
+}
+.director-section h2{
+    font-size:26px;font-weight:bold;margin-bottom:5px;color:white;
+}
+.director-section h3{
+    font-size:18px;font-weight:bold;color:#e0e0e0;margin-bottom:15px;
+}
+.director-section p{text-align:justify;}
+
+/* ===== FOOTER ===== */
+footer{
+    background:black;color:white;text-align:center;
+    padding:20px;font-size:14px;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp{
+    position:fixed;bottom:20px;right:20px;
+    background:#25d366;color:white;padding:15px;
+    border-radius:50%;font-size:20px;text-decoration:none;z-index:1000;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== BACKGROUND VIDEO ===== -->
+<video class="bg-video" autoplay muted loop>
+    <source src="project1234.mp4" type="video/mp4">
+</video>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="logo">
+        <img src="manu1.jpeg" alt="Logo">
+        <b>GLOBAL IMPORT EXPORT</b>
+    </div>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="media.html">MEDIA GALLERY</a>
+        <a href="blog.html">BLOG</a>
+    </nav>
+</header>
+
+<!-- ===== PAGE TITLE ===== -->
+<h2 class="page-title">Media Gallery</h2>
+
+<!-- ===== MEDIA IMAGE GALLERY ===== -->
+<div class="gallery-container">
+
+    <!-- 🎥 VIDEO SECTION -->
+    <div class="video-space">
+        📌 Video Placeholder (Add video here later)
+    </div>
+
+</div>
+
+<!-- ===== DIRECTOR PROFILE ===== -->
+<div class="director-section">
+    <h2>MR. DINESH SINGH</h2>
+    <h3>DIRECTOR</h3>
+    <p>
+        A seasoned professional and entrepreneur with 25+ years of experience in managing organizations of all sizes, corporate development, operations, product marketing, and global strategy. Currently serving as Director at Mudra Global LLP, focusing on delivering high-quality products worldwide at competitive prices. We directly collaborate with farmers, suppliers, manufacturers, and importers, ensuring top-quality products reach international markets.
+    </p>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>© 2025 Mudra Global | All Rights Reserved</footer>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
+
+<!-- ===== HEADER SCROLL EFFECT ===== -->
+<script>
+window.addEventListener("scroll",()=>{
+   document.querySelector("header").style.background =
+   (window.scrollY>80) ? "rgba(0,0,0,0.7)" : "transparent";
+});
+</script>
+
+</body>
+</html>

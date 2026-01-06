@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Global Import Export Style Website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;   /* ✅ transparent header */
+    color: white;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 120px;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*  PRODUCTS DROPDOWN TRANSPARENT FINAL */
+.dropdown-box {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;        /* fully transparent */
+    border: none;
+    box-shadow: none;
+    width: 250px;
+    color: white;
+    display: none;
+    padding: 10px 0;
+}
+
+.dropdown-box a {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.dropdown-box a:hover {
+    color: #ffcf8b;    /* Golden hover effect */
+    background: rgba(255,255,255,0.0);
+}
+/* Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.overlay h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    background: #9c6b3d;
+    padding: 10px 20px;
+}
+
+/* About */
+.about-section {
+    padding: 80px 60px;
+    display: flex;
+    gap: 50px;
+    background: #ffffff;
+}
+
+/* Products */
+.products {
+    padding: 10px 50px;
+    background: #f3efe6;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* Services */
+.services {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.service-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    width: 220px;
+    padding: 30px;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+/* WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="manu1.jpeg" alt="Logo">
+        <b>GLOBAL IMPORT EXPORT</b>
+    </div>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="SERVICES.html">SERVICES</a>
+        <a href="products.html">PRODUCTS</a> 
+        <a href="contact.html">CONTACT US</a>
+        <a href="media.html">MEDIA GALLERY</a>
+        <a href="blog.html">BLOG</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <video autoplay muted loop playsinline>
+        <source src="project123456.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay">
+        <h1>WELCOME TO IMPORT EXPORT BUSINESS</h1>
+        <p>DELIVERING QUALITY PRODUCTS AROUND THE WORLD</p>
+    </div>
+</section>
+
+<section class="about-section">
+    <div>
+        <h2>Global Trading Distribution & Consulting</h2>
+        <p>Blue Ocean has been formed to work progressively in the field of  import & export, business.<br><br>
+
+ We offer a secure platform to facilitate the supply of quality products across domestic and foreign countries. As an import & export.  business, we seek to provide real services to exporters and importers who are committed to the worldwide supply of commodities around the entire world.<br><br>
+
+ We deal reasonably with producers, farmers, wholesalers, importers, and other stakeholders to establish a strong global presence in international trade right away. <br><br>
+Being an import export company,  our final aspiration is to close the gap in the foreign market between buyers and sellers.<br>
+ In order to offer the highest quality of merchandise, ensure customer satisfaction and cultivate customer loyalty, we guarantee assistance by qualified consultants.</p>
+    </div>
+    <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png">
+    </div>
+</section>
+
+<section class="products">
+    <h1>Our Product Categories</h2>
+    <div class="product-grid">
+        <div class="product-card"><img src="image1.jpg">FRUITS & VEGETABLE</div>
+        <div class="product-card"><img src="image2.jpg">FMCG</div>
+        <div class="product-card"><img src="image3.jpg">HOME ELECTRIC APPLIANCES</div>
+        <div class="product-card"><img src="image4.jpg">MACHINERY AND VEHICLES</div>
+        <div class="product-card"><img src="image5.jpg">METAL AND ALLOYS</div>
+        <div class="product-card"><img src="image6.jpg">WOOD</div>
+    </div>
+</section>
+
+<section class="services">
+    <h2>OUR SERVICES</h2>
+    <div class="service-box">
+        <div class="card">Manufacturing</div>
+        <div class="card">Export & Trading</div>
+        <div class="card">Logistics Support</div>
+    </div>
+</section>
+
+<footer>© 2025 Mudra Global</footer>
+
+<a class="whatsapp" href="#">💬</a>
+
+<script>
+window.addEventListener("scroll", function () {
+    let header = document.querySelector("header");
+    if (window.scrollY > 80) {
+        header.style.background = "rgba(0,0,0,0.7)";
+    } else {
+        header.style.background = "transparent";
+    }
+});
+
+</body>
+</html>

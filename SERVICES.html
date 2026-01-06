@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Services - Mudra Global Import Export</title>
+
+<style>
+/* ===== BASIC ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial, sans-serif;color:#fff;}
+
+/* ===== BACKGROUND VIDEO ===== */
+.bg-video{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    z-index:-1;
+    filter:brightness(75%);
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;   /* ✅ transparent header */
+    color: white;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 120px;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* ===== HERO SECTION ===== */
+.service-hero{
+    padding-top:180px;padding-bottom:60px;
+    display:flex;justify-content:center;align-items:center;gap:40px;
+    padding-left:40px;padding-right:40px;
+}
+.service-hero img{width:480px;border-radius:10px;}
+.service-hero .right{text-align:center;max-width:450px;}
+.service-hero h2{font-size:32px;font-weight:bold;color:#fff;}
+.small-logo{width:200px;margin-bottom:20px;}
+.highlight{
+    background:#9c6b3d;color:white;padding:10px 20px;
+    border-radius:6px;font-weight:bold;margin-top:10px;display:inline-block;
+}
+
+/* ===== CONTENT SECTIONS GLASS EFFECT ===== */
+.details-section{
+    padding:60px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(6px);
+}
+.details-content{
+    display:flex;align-items:flex-start;gap:30px;margin-bottom:50px;
+}
+.details-content img{width:330px;border-radius:10px;}
+.details-content h3{font-size:28px;color:#ffdd91;margin-bottom:10px;font-weight:bold;}
+.details-content p{line-height:1.5;margin-bottom:10px;font-size:15px;color:#eee;}
+
+/* ===== MAIN HEADING ===== */
+.main-heading{
+    text-align:center;font-size:38px;color:#ffdd91;font-weight:bold;
+    margin:20px 0 40px;
+}
+
+/* ===== WHATSAPP ICON ===== */
+.whatsapp{
+    position:fixed;bottom:20px;right:20px;
+    background:#25d366;color:white;padding:15px;
+    border-radius:50%;font-size:20px;text-decoration:none;z-index:99;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#000;color:white;text-align:center;padding:18px;
+    font-size:14px;
+    backdrop-filter:blur(10px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    header .logo img{height:80px;}
+    .service-hero,.details-content{flex-direction:column;text-align:center;}
+    .service-hero img,.details-content img{width:100%;}
+}
+</style>
+</head>
+<body>
+
+<!-- 🔥 BACKGROUND VIDEO -->
+<video class="bg-video" autoplay muted loop>
+    <source src="project12345.mp4" type="video/mp4">
+</video>
+
+<!-- ======= HEADER ======= -->
+<header>
+    <div class="logo">
+        <img src="manu1.jpeg" alt="Logo">
+        <b>GLOBAL IMPORT EXPORT</b>
+    </div>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="media.html">MEDIA GALLERY</a>
+        <a href="blog.html">BLOG</a>
+    </nav>
+</header>
+
+
+<!-- ======= TOP SECTION ======= -->
+<section class="service-hero">
+     <div class="left">
+        <img class="small-logo" src="ship1.jpg" height="480px">
+        <h2>Global/Worldwide shipping <br>Company</h2>
+        <span class="highlight">Delivering Quality Products Around the World</span>
+    </div>
+
+    <div class="right">
+        <img class="small-logo" src="manu1.jpeg">
+        <h2>Merchant Export/Trading Company</h2>
+        <span class="highlight">Delivering Quality Products Around the World</span>
+    </div>
+</section>
+
+
+<!-- ======= MAIN TITLE ======= -->
+<h2 class="main-heading">Global Merchant Import & Export Service</h2>
+
+
+<!-- ======= SERVICE DETAILS ======= -->
+<section class="details-section">
+
+    <div class="details-content">
+        <img src="ship2.jpg" alt="Container Ship">
+        <div>
+            <h3>Merchant Export/Trading Export</h3>
+            <p>We are involved in global export/import of commodities like FMCG, Agro, Electronics & more.</p>
+            <p>Delivering across Asia, Africa, Europe & Middle East with commitment & trust.</p>
+        </div>
+    </div>
+
+    <div class="details-content">
+        <img src="ship3.jpg" alt="Distribution">
+        <div>
+            <h3>Products Distribution</h3>
+            <p>We help with distribution, logistics setup & business tie-ups worldwide.</p>
+            <p>Our network supports market entry in multiple regions.</p>
+        </div>
+    </div>
+
+    <div class="details-content">
+        <img src="ship4.jpg" alt="Market Analysis">
+        <div>
+            <h3>Market Analysis</h3>
+            <p>We analyze demand, competitors & pricing trends for safe business decisions.</p>
+            <p>Guided strategies ensure business growth.</p>
+        </div>
+    </div>
+
+    <div class="details-content">
+        <img src="ship5.jpg" alt="Partnership Strategy">
+        <div>
+            <h3>Negotiation & Partnerships</h3>
+            <p>We build business connections to support supply chains & international trade benefits.</p>
+            <p>Step-by-step assistance for expansion.</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ======= FOOTER ======= -->
+<footer>© 2025 Mudra Global | All Rights Reserved</footer>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
+
+
+<!-- ======= JAVASCRIPT ======= -->
+<script>
+window.addEventListener("scroll",()=>{
+    let header=document.querySelector("header");
+    header.style.background = (window.scrollY>80) ? "rgba(0,0,0,0.7)" : "transparent";
+});
+</script>
+
+</body>
+</html>

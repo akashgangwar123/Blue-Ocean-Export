@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us - Mudra Global</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial, sans-serif;color:#333;}
+
+/* ==== VIDEO BACKGROUND ==== */
+.bg-video{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    z-index:-1;
+    filter:brightness(80%);
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;   /* ✅ transparent header */
+    color: white;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 120px;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* MAIN LAYOUT */
+.contact-container{
+    margin-top:180px;padding:50px;display:flex;
+    justify-content:center;gap:40px;
+}
+
+/* PANELS GLASS EFFECT */
+.left-info, .right-form{
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(8px);
+    border-radius:10px;
+}
+.left-info{width:35%;padding:30px;}
+.right-form{width:55%;padding:40px;}
+
+.left-info h2{color:#9c6b3d;margin-bottom:25px;font-size:26px;}
+.right-form h2{font-size:32px;margin-bottom:20px;font-weight:bold;}
+
+input,textarea{
+    width:100%;padding:12px;margin:10px 0;font-size:15px;
+    border:1px solid #ccc;border-radius:5px;
+}
+textarea{height:150px;resize:none;}
+button{
+    background:#ffcc33;border:none;padding:12px 35px;
+    font-weight:bold;border-radius:5px;cursor:pointer;
+}
+button:hover{background:#e1b528;}
+
+/* FOOTER */
+footer{
+    background:black;color:white;text-align:center;
+    padding:20px;margin-top:40px;font-size:14px;
+}
+.whatsapp{
+    position:fixed;bottom:20px;right:20px;
+    background:#25d366;color:white;padding:15px;border-radius:50%;
+    font-size:20px;text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .contact-container{flex-direction:column;}
+    .left-info,.right-form{width:100%;}
+    .logo img{height:80px;}
+}
+</style>
+</head>
+<body>
+
+<!-- 🔥 BACKGROUND VIDEO (Add this) -->
+<video class="bg-video" autoplay muted loop>
+    <source src="videoplayback.mp4" type="video/mp4">
+</video>
+
+<header>
+    <div class="logo">
+        <img src="manu1.jpeg" alt="Logo">
+        <b>GLOBAL IMPORT EXPORT</b>
+    </div>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="media.html">MEDIA GALLERY</a>
+        <a href="blog.html">BLOG</a>
+    </nav>
+</header>
+
+
+
+<!-- CONTACT SECTION -->
+<div class="contact-container">
+
+    <div class="left-info">
+        <h2>Contact Us</h2>
+        <p>📞 Phone: (+91) ____________</p>
+        <p>📞 Phone: (+__) ____________</p>
+        <p>📩 Email: ____________@gmail.com</p>
+        <p>📩 Email: ____________@gmail.com</p>
+        <br><h3>Locations:</h3>
+        <p>📍 Gurgaon, India - ____________</p>
+        <p>📍 USA - ____________</p>
+        <p>📍 Dubai - ____________</p>
+    </div>
+
+    <div class="right-form">
+        <h2>Talk To Us – We're Here To Help</h2>
+
+        <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
+            <input type="hidden" name="_next" value="thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="text" name="name" placeholder="Your Name (required)" required>
+            <input type="email" name="email" placeholder="Your Email (required)" required>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">SEND</button>
+        </form>
+    </div>
+</div>
+
+<footer>© 2025 Mudra Global | All Rights Reserved</footer>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
+
+<script>
+window.addEventListener("scroll",()=>{
+    document.querySelector("header").style.background =
+    (window.scrollY>80) ? "rgba(0,0,0,0.7)" : "transparent";
+});
+</script>
+
+</body>
+</html>

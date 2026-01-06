@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products - Global Import Export</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{color:white;overflow-x:hidden;}
+
+/* ================= HEADER (SAME AS HOME PAGE) ================= */
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;   /* ✅ transparent header */
+    color: white;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 120px;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ================= BACKGROUND VIDEO ================= */
+.bg-video {
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    z-index:-1;
+}
+
+/* ================= PAGE TITLE ================= */
+.page-title {
+    margin-top:160px;
+    text-align:center;
+    font-size:45px;
+    font-weight:bold;
+    text-shadow:0px 3px 10px black;
+}
+
+/* ================= PRODUCT GRID ================= */
+.products-section{
+    padding:50px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+.product-box{
+    position:relative;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:15px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.3s;
+}
+.product-box:hover{transform:scale(1.05);}
+.product-box img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+.product-name{
+    text-align:center;
+    padding:15px;
+    font-size:20px;
+    background:rgba(0,0,0,0.45);
+}
+
+/* ================= POPUP ================= */
+.popup{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    background:rgba(0,0,0,0.55);
+    padding:10px 14px;
+    border-radius:10px;
+    display:none;
+}
+.popup p{
+    margin:5px;
+    font-size:13px;
+    color:white;
+}
+.product-box:hover .popup{display:block;}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<video class="bg-video" autoplay muted loop>
+  <source src="project12.mp4" type="video/mp4">
+</video>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+    <div class="logo">
+        <img src="manu1.jpeg" alt="Logo">
+        <b>GLOBAL IMPORT EXPORT</b>
+    </div>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="SERVICES.html">SERVICES</a>
+        <a href="products.html">PRODUCTS</a> 
+        <a href="contact.html">CONTACT US</a>
+        <a href="media.html">MEDIA GALLERY</a>
+        <a href="blog.html">BLOG</a>
+    </nav>
+</header>
+
+
+<!-- TITLE -->
+<h1 class="page-title">OUR PRODUCT CATEGORIES</h1>
+
+<!-- PRODUCT CARDS -->
+<section class="products-section">
+
+    <div class="product-box" onclick="location.href='general-trading.html'">
+        <img src="6.jpeg">
+        <div class="product-name">GENERAL TRADING</div>
+        <div class="popup"><p>Household</p><p>Steel</p><p>Plastic Items</p></div>
+    </div>
+
+    <div class="product-box" onclick="location.href='agro.html'">
+        <img src="5.jpeg">
+        <div class="product-name">AGRO COMMODITIES</div>
+        <div class="popup"><p>Wheat</p><p>Rice</p><p>Spices</p></div>
+    </div>
+
+    <div class="product-box" onclick="location.href='fmcg.html'">
+        <img src="4.jpeg">
+        <div class="product-name">FMCG EXPORTS</div>
+        <div class="popup"><p>Beverages</p><p>Snacks</p><p>Personal Care</p></div>
+    </div>
+
+    <div class="product-box" onclick="location.href='vehicles.html'">
+        <img src="3.jpeg">
+        <div class="product-name">MACHINERY & VEHICLES</div>
+        <div class="popup"><p>Tractors</p><p>Engines</p><p>Cars</p></div>
+    </div>
+
+    <div class="product-box" onclick="location.href='metal.html'">
+        <img src="1.jpeg">
+        <div class="product-name">METAL & ALLOYS</div>
+        <div class="popup"><p>Aluminium</p><p>Copper</p><p>Steel</p></div>
+    </div>
+
+    <div class="product-box" onclick="location.href='wood.html'">
+        <img src="2.jpeg">
+        <div class="product-name">WOOD TRADING</div>
+        <div class="popup"><p>Hardwood</p><p>Plywood</p><p>Timber Sheets</p></div>
+    </div>
+
+</section>
+
+<script>
+window.addEventListener("scroll", function () {
+    let header = document.querySelector("header");
+    if (window.scrollY > 80) {
+        header.style.background = "rgba(0,0,0,0.7)";
+    } else {
+        header.style.background = "transparent";
+    }
+});
+</body>
+</html>
